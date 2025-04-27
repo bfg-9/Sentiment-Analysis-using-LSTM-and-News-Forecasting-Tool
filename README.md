@@ -1,2 +1,41 @@
 # Sentiment-Analysis-using-LSTM-and-News-Forecasting-Tool
 Built using LSTM networks and sentiment analysis to enhance market forecasting accuracy. Predicts stock movements by combining historical stock data with real-time news sentiment
+
+/stock-sentiment-lstm/
+│
+├── notebooks/
+│   └── 01_sentiment_stock_analysis.ipynb    # <- Your main notebook
+│
+├── src/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── fetch_news.py                     # Function to fetch news
+│   │   ├── get_macro_indices.py              # Get Dow Jones, NASDAQ, S&P
+│   │   ├── fetch_stock_data.py               # Yahoo Finance stock data
+│   │
+│   ├── features/
+│   │   ├── sentiment_pipeline.py             # BERT model or other sentiment analysis
+│   │   └── preprocess_lstm.py                # Scaling, sequence splitting
+│   │
+│   ├── models/
+│   │   ├── lstm_model.py                     # LSTM model definition and training
+│   │
+│   ├── utils/
+│   │   ├── merge_full_data.py                # Merge all datasets cleanly
+│   │   └── helpers.py                        # Any additional utility functions
+│
+├── data/
+│   ├── raw/                                  # Raw downloaded news, stock, macro files
+│   ├── processed/                            # Cleaned data ready for modeling
+│
+├── outputs/
+│   ├── models/                               # Saved trained LSTM models
+│   ├── figures/                              # Charts, graphs, visualizations
+│
+├── config/
+│   └── config.yaml                           # API keys, constants, parameters
+│
+├── requirements.txt                          # List of required libraries
+├── README.md                                 # Project overview
+└── .gitignore                                # Files/folders to ignore in Git
+
